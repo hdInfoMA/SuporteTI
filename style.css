@@ -1,0 +1,243 @@
+/* Reseta margens e paddings para um design mais limpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cor de fundo e fontes do corpo */
+body {
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Centraliza o conteúdo dentro de .container */
+.container {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Estilização das imagens dentro do container */
+img {
+    width: 100%;
+    max-width: 400px; /* Diminuir o tamanho da imagem principal */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Efeito de zoom nas imagens ao passar o mouse */
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo de apresentação de texto (título e descrição) */
+.apresentacao {
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;
+}
+
+/* Descrição do texto */
+.apresentacao p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Título principal */
+.apresentacao h1 {
+    font-size: 32px; /* Aumentar o tamanho da fonte do título */
+    font-weight: bold;
+    color: #4e4cf5;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo */
+.apresentacao h2 {
+    font-size: 24px;
+    color: #14ff91;
+    margin-bottom: 20px;
+}
+
+/* Bloco de links (WhatsApp e QR Code) */
+.bloco {
+    display: block;
+    margin-top: 30px; /* Diminuir o espaço acima do bloco */
+    padding: 15px; /* Diminuir o padding para ficar mais compacto */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 1s;
+}
+
+/* Estilo para o QR Code */
+.qrcode,
+.linkzap {
+    margin-bottom: 10px; /* Diminuir a margem para subir mais */
+    padding: 10px; /* Diminuir o padding para reduzir o espaço interno */
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 1.5s;
+}
+
+/* Imagem do QR Code */
+.qrcode img {
+    width: 100%;
+    max-width: 200px; /* Diminuir o tamanho do QR Code */
+    margin-bottom: 10px; /* Diminuir a margem para subir mais */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de zoom nas imagens do QR Code */
+.qrcode img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Icone do WhatsApp */
+.linkzap i {
+    font-size: 60px;
+    color: #25d366; /* Cor verde do WhatsApp */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de zoom no ícone do WhatsApp */
+.linkzap i:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo do link de WhatsApp */
+.linkzap a {
+    text-decoration: none;
+    color: #25d366;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Mudança de cor e aumento no hover do link */
+.linkzap a:hover {
+    color: #128c7e;
+    transform: scale(1.1);
+}
+
+/* Adiciona a borda ao passar o mouse sobre os links */
+.linkzap a:focus,
+.qrcode img:focus,
+.linkzap i:focus {
+    outline: none;
+    border: 2px solid #4e4cf5;
+}
+
+/* Responsividade: Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .apresentacao h1 {
+        font-size: 24px;
+    }
+
+    .apresentacao p {
+        font-size: 16px;
+    }
+
+    .bloco {
+        padding: 15px;
+    }
+
+    .qrcode img,
+    .linkzap i {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .apresentacao h1 {
+        font-size: 22px;
+    }
+
+    .apresentacao h2 {
+        font-size: 20px;
+    }
+
+    .qrcode img {
+        max-width: 180px;
+    }
+
+    .linkzap i {
+        font-size: 50px;
+    }
+
+    .linkzap a {
+        font-size: 16px;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* Créditos de desenvolvedores */
+footer p {
+    margin: 5px 0;
+}
+
+footer strong {
+    color: #4e4cf5; /* Um tom de azul para os nomes */
+    font-weight: bold;
+}
